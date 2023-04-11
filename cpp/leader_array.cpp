@@ -21,7 +21,7 @@ class Solution {
             }
         }
         for(auto it : lead){
-            cout<<it<<endl;
+            cout<<it<< " ";
         }
         return lead;
     }
@@ -30,10 +30,10 @@ class Solution {
 };
 int main(){
 
-    int arr[]={1,2,3,4,0};
+    int arr[]={16 17 4 3 5 2};
     
     Solution obj ;
-    obj.leaders(arr,5);
+    obj.leaders(arr,2722);
     // vector <int> lea;
 
     // for (int i = 0; i < 5; i++)

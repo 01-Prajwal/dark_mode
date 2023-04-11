@@ -97,6 +97,36 @@ void print(Node *&head)
     }
     cout <<endl;
 }
+
+
+Node* kReverse(Node* head, int k) {
+    //base call
+    if(head == NULL) {
+        return NULL;
+    }
+    
+    //step1: reverse first k nodes
+    Node* next = NULL;
+    Node* curr = head;
+    Node* prev = NULL;
+    int count= 0;
+    
+    while( curr != NULL && count < k ) {
+        next = curr -> next;
+        curr -> next = prev;
+        prev = curr;
+        curr = next;
+        count++;
+    }
+    
+    //step2: Recursion dekhlega aage ka 
+    if(next != NULL) {
+        head -> next = kReverse(next,k);
+    }
+    
+    //step3: return head of reversed list
+    return prev;
+}
 int main()
 {
 
@@ -109,10 +139,12 @@ int main()
     print(head);
     insertAtTail(tail, 90);
     print(head);
-    insertAtPos(tail,head, 2, 22);
-        print(head);
-    deleteNode(1,head);
-        print(head);
+    // insertAtPos(tail,head, 2, 22);
+    //     print(head);
+    // deleteNode(1,head);
+    //     print(head);
+    // kReverse(head,2);
+    //     print(head);
 
     
     // cout << "DATA" << node1->data << endl;
