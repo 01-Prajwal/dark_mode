@@ -61,7 +61,8 @@ class Stack{
 int main(){
 
     Stack st(5);
-
+    // string str  = "efawefefw";
+    // cout<<str[0]<<endl;
     st.push(1);
     st.push(2);
     st.push(78);    
