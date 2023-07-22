@@ -1,0 +1,47 @@
+#include<bits/stdc++.h>
+using namespaxe std;
+
+vector<int> rotateArray(vector<int>& arr, int n,int D){
+
+    vector<int> ans;
+    for(int i = D-1;i < n;i++){
+
+        ans.push_back(arr[i]);
+        if (i == n-1)
+        {
+            /* code */
+            break;
+        }
+        
+
+    }
+    for (int i = 0; i < D-1; i++)
+    {
+        /* code */
+        ans.push_back(arr[i]);
+    }
+    for (auto &it :ans)
+    {
+        /* code */
+        cout<<it<<" ";
+    }
+    return ans;
+    
+
+}
+
+
+int main(){
+    vector <int> a;
+    a.push_back(4);
+    a.push_back(0);
+    a.push_back(3);
+    a.push_back(2);
+    a.push_back(5);
+
+
+    rotateArray(a,5,2);
+
+
+    return 0 ;
+}
